@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <title>KarmarJS</title>
+	    <title>Allin Frontend</title>
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	    <script src="node_modules/angular/angular.js"></script>
 		<script src="node_modules/angular-route/angular-route.js"></script>
 		<link rel="stylesheet" href="index.css">
 		<script src="index.js"></script>
 		<script src="home/home.js"></script>
+		<script src="basic/index.js"></script>
 	</head>
 	<body ng-app="myApp">
-		<div ng-view></div>
+		<div class="flex-container">
+	      <a class="flex-item" href="/#!/home">Home</a>
+	      <a class="flex-item" href="/#!/basic">Basic</a>
+	      <a class="flex-item" href="/#!/view2">View 2</a>
+	      <a class="flex-item" href="/#!/directive">directive</a>
+	      <a class="flex-item" href="/#!/link">link</a>
+	      <a class="flex-item" href="/#!/on">on</a>
+		  <a class="flex-item" href="/#!/logout">Logout</a>
+		</div>
+		<div class="index-content" ng-view></div>
 	</body>
 </html>
 

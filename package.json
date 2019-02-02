@@ -7,8 +7,15 @@
     "angular-route": "~1.7.6",
     "browser-sync": "^2.26.3"
   },
+  "devDependencies": {
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^0.3.5"
+  },
   "scripts": {
-    "test": "test",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "start": "browser-sync start --server --browser 'firefox' --files '*.css, **/*.css, *.html, **/*.html, *.js, **/*.js'"
   },
   "author": "iCAMPAGNE",

@@ -2,8 +2,13 @@
 
 angular.module('myApp', [
   'ngRoute',
-  'myApp.home'
+  'myApp.home',
+  'myApp.basic'
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-    $routeProvider.otherwise({redirectTo: '/home'});
+	$locationProvider.hashPrefix('!');
+    $routeProvider.otherwise( {
+	    templateUrl: 'home/home.html',
+	    controller: 'HomeCtrl'
+	  });
   }]);
