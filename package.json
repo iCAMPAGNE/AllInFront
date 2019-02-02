@@ -1,0 +1,16 @@
+{
+  "name": "AllInFront",
+  "version": "1.0.0",
+  "description": "Example application AngularJS with Karma and Jasmine",
+  "dependencies": {
+    "angular": "^1.7.6",
+    "angular-route": "~1.7.6",
+    "browser-sync": "^2.26.3"
+  },
+  "scripts": {
+    "test": "test",
+    "start": "browser-sync start --server --browser 'firefox' --files '*.css, **/*.css, *.html, **/*.html, *.js, **/*.js'"
+  },
+  "author": "iCAMPAGNE",
+  "license": "MIT"
+}

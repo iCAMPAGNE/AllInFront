@@ -1,0 +1,56 @@
+/* app css stylesheet */
+
+h2 {
+	color: blue;
+}
+
+.index-content {
+	padding: 5em 0 0 1em;
+}
+
+.flex-container {
+    position: fixed;
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+.flex-item {
+	padding: 0.8em;
+    border-radius: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color: cornflowerblue;
+    width: 100px;
+    margin: 1em;
+    text-decoration: none;
+}
+
+.flex-item:last-child {
+    margin-left: auto;
+}
+.flex-container a:visited {
+    text-decoration: none;
+}
+
+
+input {
+	padding: 0.3em;
+}
+div.loginpage {
+    padding: 10em;
+}
+.login td {
+	padding: 0.6em;
+}
+.login input {
+    border: solid black 0.1em;
+    border-radius: 0.5em;
+    background-color: #FFFFEE;
+}
+.login input[type="submit"] {
+	width: 100%;
+    background-color: #FFFFAA;
+}
