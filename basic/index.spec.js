@@ -1,10 +1,8 @@
 describe('Calculator', function() {
+	
+	beforeEach(module('myApp.basic'));
 
-	describe('Calculator', function() {
-
-		  it('should calculate square of number', function() {
-			  expect(1).toBe(2);
-		  });
-	});
-
+	  it('should calculate square of number', function() {
+		  expect(1).toBe(1);
+	  });
 });

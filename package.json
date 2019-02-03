@@ -8,15 +8,17 @@
     "browser-sync": "^2.26.3"
   },
   "devDependencies": {
-    "jasmine-core": "^2.2.0",
-    "karma": "^0.12.31",
-    "karma-chrome-launcher": "^0.1.7",
-    "karma-firefox-launcher": "^1.1.0",
-    "karma-jasmine": "^0.3.5"
+    "angular-mocks": "^1.7.6",
+    "jasmine": "^3.3.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.16"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start karma.conf.js",
-    "start": "browser-sync start --server --browser 'firefox' --files '*.css, **/*.css, *.html, **/*.html, *.js, **/*.js'"
+    "test": "karma start karma.conf.js --single-run",
+    "start": "browser-sync start --server --files '*.css, **/*.css, *.html, **/*.html, *.js, **/*.js'"
   },
   "author": "iCAMPAGNE",
   "license": "MIT"
