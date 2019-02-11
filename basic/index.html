@@ -6,6 +6,6 @@
 		<h4>Calculate square</h4>
 		Number: <input type="number" ng-model="vm.number" />
 		<input type="button" value="Calculate" ng-show="vm.number" ng-click="vm.doAction()" />
-		<input type="text" readonly ng-show="vm.number && vm.result" ng-model="vm.result" />
+		<input type="text" readonly ng-show="vm.number && !!vm.result" ng-model="vm.result" />
 	</div>
 </div>

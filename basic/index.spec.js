@@ -1,8 +1,19 @@
 describe('Calculator', function() {
+	var ctrl;
+	var vm = {};
 	
 	beforeEach(module('myApp.basic'));
 
-	  it('should calculate square of number', function() {
-		  expect(1).toBe(1);
-	  });
+	beforeEach(inject(function($controller) {
+		ctrl = $controller('BasicCtrl');
+	}));
+	
+	it('should have a name', function() {
+		expect(ctrl.name).toBe('Basic');
+	});
+
+	it('should calculate square of number', function() {
+		var result = ctrl.calculateSquare(3);
+		expect(result).toBe(9);
+	});
 });

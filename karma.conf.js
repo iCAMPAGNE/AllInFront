@@ -12,8 +12,9 @@ module.exports = function(config) {
         'node_modules/angular/angular.js',
         'node_modules/angular-route/angular-route.js',
         'node_modules/angular-mocks/angular-mocks.js',
-        '*/*.spec.js',
-        '*/*.js'
+        'https://code.jquery.com/jquery-3.3.1.min.js',
+        '*/*.js',
+        '*/*.spec.js'
     ],
 
     autoWatch: false,

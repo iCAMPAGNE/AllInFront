@@ -13,6 +13,10 @@ angular.module('myApp.basic', ['ngRoute'])
 	vm.name = 'Basic';
 	vm.calculateSquare = calculateSquare;
 	
+	$('input[type=number]').bind('focus', function(e) {
+		vm.result = undefined;
+	});
+	
 	vm.doAction = function() {
 		var number = vm.number;
 		vm.result = calculateSquare(number);
