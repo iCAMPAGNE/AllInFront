@@ -1,0 +1,16 @@
+<i>Table {{title}}</i>
+<table>
+	<tr>
+		<td>Profession</td><td ng-bind="profession" ></td>
+	</tr>
+	<tr>
+		<td>Name</td><td><input type="text" ng-model="name" /></td>
+	</tr>
+	<tr>
+		<td>Sex</td><td ng-bind="sex"></td>
+	</tr>
+	<tr>
+		<td><input type="button" ng-click="cancel(message)" value="Cancel" /></td>
+		<td><input type="button" ng-click="action()" value="Submit" /></td>
+	</tr>
+</table>

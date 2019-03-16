@@ -1,0 +1,29 @@
+<div>Directives</div>
+<br>
+<simple-directive></simple-directive>
+
+<directive-with-binding text="TEXT"></directive-with-binding><br>
+
+<directive-with-bindings title="Person" profession="profession" name="name" sex="sex" action="invoeren()" cancel="cancel('Afbreken')"></directive-with-bindings><br>
+
+<directive-using-attr value=7>content</directive-using-attr>
+<br>
+<table-input values-title="Values">
+	<input type="text" ng-bind="input-table-name"></input>
+</table-input>
+
+
+<div>
+  Date format: <input type="text" ng-model="format">,
+  current time is: <span show-current-time="format"></span>
+</div>
+
+<directive-with-controller text="Text from user"></directive-with-controller>
+<directive-with-external-controller text="Text from user of directive with external controller"></directive-with-external-controller>
+
+
+
+<frans-directive></frans-directive>
+
+<html-directive type="name" user="frans" theme="backgroundColor"></html-directive>
+<html-directive type="name" user="joke" theme="backgroundColor"></html-directive>
