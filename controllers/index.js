@@ -3,13 +3,14 @@
 var app = angular.module("myApp.controllers", []);
 app.component("test", {
   bindings: {
-    contactId: "@"
+    contactId: "@",
+    action: '&'
   },
   bindToController: { contactId: '@' },
   controllerAs: "vm",
-  controller: () => {
+  controller: function () {
 	  var vm = this;
-    console.log(`contact id from controller: ${vm.contactId}`);
+    //console.log(`contact id from controller: ${vm.contactId}`);
   },
-  template: "<div>Contact id from view: {{vm.contactId}}</div>"
+  template: "<div ng-click='vm.action'>Contact id from view: {{vm.contactId}}</div>"
 });

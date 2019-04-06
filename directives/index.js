@@ -5,7 +5,7 @@ var directiveModule = angular.module('myApp.directives', []);
 directiveModule.directive('simpleDirective', function() {
 	return {
 		restrict: 'E',
-		template: 'This is a simple directive</b> used by {{welcome}}<br>'
+		template: 'This is a simple directive</b> used by {{welcome}}'
 	}
 })
 
@@ -15,7 +15,7 @@ directiveModule.directive('directiveWithBinding', function() {
 		scope: {
 			text: '@'
 		},
-		template: 'This directive has one text-binding {{text}}<br>'
+		template: 'This directive has one text-binding {{text}}'
 	};
 })
 
@@ -60,26 +60,25 @@ directiveModule.directive('tableInput', function() {
 })
 
 directiveModule.directive('showCurrentTime',  ['$interval', 'dateFilter', function($interval, dateFilter) {
-	  function link(scope, element, attrs) {
-		    var format, timeoutId;
+	function link(scope, element, attrs) {
+		var format, timeoutId;
 
-		    scope.$watch(attrs.showCurrentTime, function(value) {
+		scope.$watch(attrs.showCurrentTime, function(value) {
 		      format = value;
-		    });
+		});
 
-		    // start the UI update process; save the timeoutId for canceling
-		    timeoutId = $interval(function() {
-				element.text(dateFilter(new Date(), format)); // Manipulate DOM
-		    }, 1000);
+		// start the UI update process; save the timeoutId for canceling
+		timeoutId = $interval(function() {
+			element.text(dateFilter(new Date(), format)); // Manipulate DOM
+		}, 1000);
+		element.on('$destroy', function() {
+			$interval.cancel(timeoutId);
+		});
+	}
 
-		    element.on('$destroy', function() {
-		      $interval.cancel(timeoutId);
-		    });
-		  }
-
-		  return {
-		    link: link
-		  };
+	return {
+		link: link
+	};
 }]);
 
 directiveModule.directive('directiveWithController', function() {
@@ -119,3 +118,26 @@ directiveModule.directive('directiveWithExternalController', function() {
 		templateUrl:  '/directives/controller-driven-directive.html'
 	};
 });
+
+directiveModule.directive('directiveForTesting', function() {
+	var controller = function() {
+    	var vm = this;
+		console.log('Inline controller');
+    	vm.someText = 'controller text';
+	};
+	return {
+		restrict: 'E',
+	    scope: {
+	    	text: '@',
+	    	label: '<',
+	    	name: '=',
+	    	action: '<',
+	    	show: '<'
+	    },
+	    bindToController: true,
+	    controller: controller,
+	    controllerAs: 'vm',
+		template:  '<div class="text">{{vm.someText}}</div><p>{{vm.text}}</p><span ng-bind="vm.label"></span><input ng-model="vm.name" ng-change="vm.action"/><f class="name">{{vm.name}}</f><button ng-click="vm.action" value="{{vm.show}}"/>'
+	};
+});
+

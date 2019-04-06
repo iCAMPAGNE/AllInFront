@@ -16,8 +16,8 @@ describe('Calculator', function() {
 
 	it('should calculate square of number', function() {
 		expect(1).toBe(1);
-		console.log(ctrl.name);
+		console.log('Welcome name: ' + ctrl.name);
 		var div = element.find('div');
-		console.log(element.html());
+		console.log('div html: ' + element.html());
 	});
 });

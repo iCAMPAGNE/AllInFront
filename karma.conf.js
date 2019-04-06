@@ -13,8 +13,10 @@ module.exports = function(config) {
         'node_modules/angular-route/angular-route.js',
         'node_modules/angular-mocks/angular-mocks.js',
         'https://code.jquery.com/jquery-3.3.1.min.js',
-        '*/*.js',
-        '*/*.spec.js'
+        'home/*.js',
+        'basic/*.js',
+        'controllers/*.js'
+//        'directives/*.js'
     ],
 
     autoWatch: false,

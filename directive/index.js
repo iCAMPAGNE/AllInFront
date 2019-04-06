@@ -21,8 +21,7 @@ directModule
 	$scope.format = 'M/d/yy h:mm:ss a';
 
 	$scope.invoeren = function() {
-		console.log($scope.name);
-		alert('Ingevoerd');
+		alert('Ingevoerd: ' + $scope.name);
 	}
 	$scope.cancel = function(message) {
 		alert(message);

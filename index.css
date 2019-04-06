@@ -56,3 +56,10 @@ div.loginpage {
 	width: 100%;
     background-color: #FFFFAA;
 }
+
+div.directive {
+	margin: 0.5em;
+	padding: 1em;
+	background-color: #FAFAFA;
+	border-radius: 0.5em;
+}

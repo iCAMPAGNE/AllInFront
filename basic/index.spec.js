@@ -14,6 +14,6 @@ describe('Calculator', function() {
 
 	it('should calculate square of number', function() {
 		var result = ctrl.calculateSquare(3);
-		expect(result).toBe(9);
+		expect(result).toBe(9, 'calculation of quare fails.');
 	});
 });
