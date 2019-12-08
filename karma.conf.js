@@ -15,8 +15,8 @@ module.exports = function(config) {
         'https://code.jquery.com/jquery-3.3.1.min.js',
         'home/*.js',
         'basic/*.js',
-        'controllers/*.js'
-//        'directives/*.js'
+        'controllers/*.js',
+        'directives/*.js'
     ],
 
     autoWatch: false,

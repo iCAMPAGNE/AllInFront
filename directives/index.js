@@ -141,3 +141,21 @@ directiveModule.directive('directiveForTesting', function() {
 	};
 });
 
+directiveModule.directive('directiveShowHide', function() {
+	var controller = function() {
+    	var vm = this;
+		vm.showing = true;
+    	
+    	vm.click = function() {
+    		vm.showing = false;
+    	}
+	};
+	return {
+		restrict: 'E',
+	    bindToController: true,
+	    controller: controller,
+	    controllerAs: 'vm',
+		template:  '<div><input type="button" value="click here" ng-click="vm.click()"/><p id="area" class="area" ng-if="vm.showing">Do you see me?</p></div>'
+	};
+});
+

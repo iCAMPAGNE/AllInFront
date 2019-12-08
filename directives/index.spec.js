@@ -62,5 +62,28 @@ describe('Directives', function() {
 		});
 	});
 
+	fdescribe('Directive for showing and hiding area', function() {
+		var element, scope;
+	  
+		beforeEach(module('myApp.directives'));
+	  
+		beforeEach(inject(function($rootScope, $compile) {
+			scope = $rootScope.$new();
+	    
+			element =
+				'<directive-show-hide></directive-show-hide>';
+	    
+			element = $compile(element)(scope);
+			scope.$digest();
+		}));
+		it('test hidden en showing', function() {
+			console.log('Innertext before hiding: ' + element.find('p').text());
+			var button = element.find('input')[0];
+			button.click();
+			scope.$digest();
+			console.log('Innertext after hiding: ' + element.find('p').text());
+		});
+	});
+
 
 });
